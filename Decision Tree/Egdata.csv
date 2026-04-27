@@ -1,0 +1,29 @@
+COVID/respiratory infection severity behavior dataset
+
+
+do sports,compliance with current hygiene measures,pre-existing conditions,infection symptoms
+regularly,pretty strictly,heart disease,mild infection symptoms
+regularly,not at all,none,mild infection symptoms
+not at all,pretty strictly,kidney disease,severe infection symptoms
+regularly,somewhat strictly,kidney disease,mild infection symptoms
+not at all,not at all,kidney disease,severe infection symptoms
+irregularly,somewhat strictly,none,mild infection symptoms
+not at all,somewhat strictly,heart disease,severe infection symptoms
+on a professional level,very strictly,lung disease,mild infection symptoms
+regularly,not at all,lung disease,severe infection symptoms
+regularly,pretty strictly,lung disease,severe infection symptoms
+not at all,not at all,lung disease,severe infection symptoms
+regularly,not at all,kidney disease,mild infection symptoms
+regularly,pretty strictly,kidney disease,mild infection symptoms
+not at all,somewhat strictly,lung disease,severe infection symptoms
+irregularly,very strictly,heart disease,mild infection symptoms
+regularly,somewhat strictly,none,mild infection symptoms
+not at all,very strictly,kidney disease,mild infection symptoms
+on a professional level,pretty strictly,none,mild infection symptoms
+not at all,somewhat strictly,kidney disease,severe infection symptoms
+regularly,very strictly,none,mild infection symptoms
+irregularly,pretty strictly,kidney disease,severe infection symptoms
+irregularly,very strictly,heart disease,mild infection symptoms
+not at all,pretty strictly,none,mild infection symptoms
+on a professional level,not at all,lung disease,severe infection symptoms
+regularly,very strictly,none,mild infection symptoms
