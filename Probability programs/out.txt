@@ -1,0 +1,209 @@
+[23bcs115@mepcolinux ex9]$python3 ht.py
+Enter the number of coin tosses: 10
+Toss 1: T
+Toss 2: H
+Toss 3: T
+Toss 4: T
+Toss 5: T
+Toss 6: T
+Toss 7: T
+Toss 8: T
+Toss 9: H
+Toss 10: H
+
+Results:
+Number of Heads: 3
+Number of Tails: 7
+
+Probabilities:
+P(Heads) = 0.3
+P(Tails) = 0.7
+[23bcs115@mepcolinux ex9]$python3 ht.py
+Enter the number of coin tosses: 10
+Toss 1: T
+Toss 2: H
+Toss 3: T
+Toss 4: T
+Toss 5: T
+Toss 6: H
+Toss 7: T
+Toss 8: T
+Toss 9: H
+Toss 10: T
+
+Results:
+Number of Heads: 3
+Number of Tails: 7
+
+Probabilities:
+P(Heads) = 0.3
+P(Tails) = 0.7
+[23bcs115@mepcolinux ex9]$python3 ht.py
+Enter the number of coin tosses: 10
+Toss 1: H
+Toss 2: T
+Toss 3: T
+Toss 4: T
+Toss 5: H
+Toss 6: H
+Toss 7: H
+Toss 8: T
+Toss 9: T
+Toss 10: T
+
+Results:
+Number of Heads: 4
+Number of Tails: 6
+
+Probabilities:
+P(Heads) = 0.4
+P(Tails) = 0.6
+[23bcs115@mepcolinux ex9]$python3 ht.py
+Enter the number of coin tosses: 4
+Toss 1: T
+Toss 2: T
+Toss 3: T
+Toss 4: H
+
+Results:
+Number of Heads: 1
+Number of Tails: 3
+
+Probabilities:
+P(Heads) = 0.25
+P(Tails) = 0.75
+[23bcs115@mepcolinux ex9]$python3 ht.py
+Enter the number of coin tosses: 4
+Toss 1: T
+Toss 2: H
+Toss 3: T
+Toss 4: T
+
+Results:
+Number of Heads: 1
+Number of Tails: 3
+
+Probabilities:
+P(Heads) = 0.25
+P(Tails) = 0.75
+[23bcs115@mepcolinux ex9]$python3 ht.py
+Enter the number of coin tosses: 5
+Toss 1: H
+Toss 2: T
+Toss 3: T
+Toss 4: T
+Toss 5: T
+
+Results:
+Number of Heads: 1
+Number of Tails: 4
+
+Probabilities:
+P(Heads) = 0.2
+P(Tails) = 0.8
+[23bcs115@mepcolinux ex9]$
+[23bcs115@mepcolinux ex9]$
+[23bcs115@mepcolinux ex9]$
+[23bcs115@mepcolinux ex9]$
+[23bcs115@mepcolinux ex9]$python3 jpd.py
+Enter number of variables: 3
+Enter variable names:
+cavity
+catch
+toothache
+
+Enter probabilities OR counts for each combination:
+cavity=T, catch=T, toothache=T
+Value: 0.1080
+cavity=T, catch=T, toothache=F
+Value: 0.072
+cavity=T, catch=F, toothache=T
+Value: 0.012
+cavity=T, catch=F, toothache=F
+Value: 0.008
+cavity=F, catch=T, toothache=T
+Value: 0.016
+cavity=F, catch=T, toothache=F
+Value: 0.144
+cavity=F, catch=F, toothache=T
+Value: 0.064
+cavity=F, catch=F, toothache=F
+Value: 0.576
+
+Normalized Knowledge Base (Truth Table):
+CAVITY | CATCH | TOOTHACHE | PROB
+-------+-------+-----------+-------
+T      | T     | T         | 0.1080
+T      | T     | F         | 0.0720
+T      | F     | T         | 0.0120
+T      | F     | F         | 0.0080
+F      | T     | T         | 0.0160
+F      | T     | F         | 0.1440
+F      | F     | T         | 0.0640
+F      | F     | F         | 0.5760
+
+--- Query Section ---
+Examples: P(a), P(a|b), P(a,~b|c)
+
+Enter query (or 'exit'): P(toothache)
+
+Calculating P(toothache)
+Rows satisfying query:
+  + cavity=T, catch=T, toothache=T  -> 0.1080
+  + cavity=T, catch=F, toothache=T  -> 0.0120
+  + cavity=F, catch=T, toothache=T  -> 0.0160
+  + cavity=F, catch=F, toothache=T  -> 0.0640
+Numerator sum = 0.2000
+Result = 0.2000
+Final Answer = 0.2000
+
+Enter query (or 'exit'): P(cavity|toothache,~catch)
+
+Calculating P(cavity | toothache, ~catch)
+
+Rows satisfying given condition B (for denominator P(B)):
+  + cavity=T, catch=F, toothache=T  -> 0.0120
+  + cavity=F, catch=F, toothache=T  -> 0.0640
+Denominator P(B) = 0.0760
+
+Rows satisfying both A and B (for numerator P(A and B)):
+  + cavity=T, catch=F, toothache=T  -> 0.0120
+Numerator P(A and B) = 0.0120
+Result = P(A and B)/P(B) = 0.0120/0.0760 = 0.1579
+Final Answer = 0.1579
+
+Enter query (or 'exit'): P(~cavity)
+
+Calculating P(~cavity)
+Rows satisfying query:
+  + cavity=F, catch=T, toothache=T  -> 0.0160
+  + cavity=F, catch=T, toothache=F  -> 0.1440
+  + cavity=F, catch=F, toothache=T  -> 0.0640
+  + cavity=F, catch=F, toothache=F  -> 0.5760
+Numerator sum = 0.8000
+Result = 0.8000
+Final Answer = 0.8000
+
+Enter query (or 'exit'): exit
+[23bcs115@mepcolinux ex9]$
+[23bcs115@mepcolinux ex9]$
+[23bcs115@mepcolinux ex9]$
+[23bcs115@mepcolinux ex9]$python3 bayes.py
+Bayes Theorem Menu Calculator
+
+Choose what to compute:
+1) P(A|B)
+2) P(B|A)
+3) P(A)
+4) P(B)
+Enter choice (1-4): 1
+Enter event A (e.g., Cavity): Meningitis
+Enter event B (e.g., Toothache): Stiffness
+Enter P(Stiffness|Meningitis): 0.7
+Enter P(Meningitis): 0.00002
+Enter P(Stiffness): 0.01
+
+P(Meningitis|Stiffness) = [P(Stiffness|Meningitis) * P(Meningitis)] / P(Stiffness)
+P(Meningitis|Stiffness) = (0.7 * 2e-05) / 0.01
+P(Meningitis|Stiffness) = 0.0014
+[23bcs115@mepcolinux ex9]$
